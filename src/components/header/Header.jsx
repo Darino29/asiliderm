@@ -10,7 +10,7 @@ const Header = () => {
   
   return (
 
-      <Box as="header" bg="#C89F72" color="white" py={4} position="fixed" top={0} left={0} width='100%' zIndex={10}>
+      <Box as="header" bg="brand.500" color="white" py={4} position="fixed" top={0} left={0} width='100%' zIndex={10}>
         <Flex justify="space-between" align="center" maxW="1200px" mx="auto">
           <Box>
             <Image src={logo} alt='Logo' height="40px"  

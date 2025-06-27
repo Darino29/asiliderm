@@ -7,7 +7,7 @@ const SkillCard = ({ logo, title }) => (
     borderWidth="1px"
     borderRadius="lg"
     overflow="hidden"
-    bg="#E7C7A4"
+    bg="brand.100"
     textAlign="center"
     padding="4"
   >
