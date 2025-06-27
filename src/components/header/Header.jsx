@@ -1,4 +1,4 @@
-import { Box, HStack, IconButton, Flex, Image, useColorMode } from '@chakra-ui/react';
+import { Box, HStack, IconButton, Flex, Image, useColorMode, useColorModeValue } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useDisclosure } from '@chakra-ui/react';
 import { Link as ScrollLink } from 'react-scroll'; 
@@ -8,10 +8,11 @@ import logo from '../../assets/images/logo-nb.png';
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
+  const bg = useColorModeValue('brand.500', 'gray.800');
   
   return (
 
-      <Box as="header" bg="brand.500" color="white" py={4} position="fixed" top={0} left={0} width='100%' zIndex={10}>
+      <Box as="header" bg={bg} color="white" py={4} position="fixed" top={0} left={0} width='100%' zIndex={10}>
         <Flex justify="space-between" align="center" maxW="1200px" mx="auto">
           <Box>
             <Image src={logo} alt='Logo' height="40px"  
