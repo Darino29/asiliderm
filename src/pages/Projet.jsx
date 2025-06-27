@@ -120,6 +120,7 @@ const Projet = () => {
         {projets.map((projet, index) => (
           <Box
             key={index}
+            position="relative"
             minW="280px"
             maxW="300px"
             bg={cardBg}
@@ -130,15 +131,28 @@ const Projet = () => {
             _hover={{ transform: 'scale(1.03)', boxShadow: 'lg' }}
             flex="0 0 auto"
           >
-            <Image src={projet.image} alt={projet.title} objectFit="cover" w="100%" h="200px" />
-            <Box p={4}>
-              <Heading size="md" mb={2} color="brand.500">
+            <Image
+              src={projet.image}
+              alt={projet.title}
+              objectFit="cover"
+              w="100%"
+              h="260px"
+            />
+            <Box
+              position="absolute"
+              bottom="0"
+              w="100%"
+              bg="rgba(0, 0, 0, 0.6)"
+              color="white"
+              p={3}
+            >
+              <Heading size="sm" mb={1}>
                 {projet.title}
               </Heading>
-              <Text fontSize="sm" color={textColor} mb={2}>
+              <Text fontSize="xs" mb={1}>
                 {projet.description}
               </Text>
-              <Text as="a" href={projet.link} fontSize="sm" color="accent" fontWeight="bold">
+              <Text as="a" href={projet.link} fontSize="xs" fontWeight="bold" textDecoration="underline">
                 En savoir plus →
               </Text>
             </Box>
