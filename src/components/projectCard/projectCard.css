@@ -1,0 +1,13 @@
+.project-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 10px 0; /* Espacement entre les cartes */
+    transition: transform 0.3s; /* Pour une interaction douce */
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px); /* Effet de survol */
+  }
+  
