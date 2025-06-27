@@ -1,7 +1,6 @@
 /* index.css */
-.chakra-ui-light {
-  background-color: white !important; /* Remplacer le fond de cette classe */
-  color: #C89F72 !important; /* Couleur du texte */
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
 
