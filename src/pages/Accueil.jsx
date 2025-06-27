@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Text, VStack, Image, Stack, Flex } from '@chakra-ui/react';
+import { Box, Button, Heading, Text, VStack, Image, Stack, Flex, useColorModeValue } from '@chakra-ui/react';
 import { DownloadIcon, EmailIcon } from '@chakra-ui/icons';
 import pdp from '../assets/images/pdp.png';
 import Catalogue from '../assets/catalogue/catalogue.pdf';
@@ -6,6 +6,7 @@ import '../styles/animation.css';
 
 
 const Accueil = () => {
+  const bg = useColorModeValue('white', 'gray.800');
   return (
     <Box
       p={8}
@@ -13,7 +14,7 @@ const Accueil = () => {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      bgColor="white"
+      bgColor={bg}
     >
       
       <Stack
