@@ -6,7 +6,7 @@ import logo from '../assets/images/pdp.png';
 
 const Contact = () => {
   return (
-    <Box p={20} bg="gray.900" color="white">
+    <Box p={20} bgColor="brand.100" color="white">
       <Flex 
         direction={{ base: 'column', md: 'row' }} 
         alignItems={{ base: 'center', md: 'flex-start' }}

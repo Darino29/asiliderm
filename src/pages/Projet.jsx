@@ -6,16 +6,16 @@ const Projet = () => {
 
   const projets = [
     {
-      title: 'Sérum Éclat',
+      title: 'Uriage Eau Thermale Lait Velouté Corps Hydratant Peaux Sèches Sensibles 500ml',
       description: 'Un sérum à la vitamine C pour un teint lumineux.',
       link: '#',
-      image: 'https://via.placeholder.com/300x200?text=Serum+Eclat',
+      image: 'https://assets.atida.com/transform/cb78c632-ef2f-4d2b-bdd7-bbd6417170e4/Uriage-Eau-Thermale-Lait-Veloute-Corps-Hydratant-Peaux-Seches-Sensibles-500ml?format=webp&io=transform%3Aextend%2Cwidth%3A600%2Cheight%3A600',
     },
     {
-      title: 'Crème Hydra+',
-      description: 'Hydratation intense pour les peaux sèches.',
+      title: 'Sérum Anti-Taches Puissance 4, 30ml',
+      description: 'Sérum anti-taches pour peaux mates à foncées, efficace sur la plupart des taches pigmentaires du visage et du corps',
       link: '#',
-      image: 'https://via.placeholder.com/300x200?text=Creme+Hydra+',
+      image: 'https://www.boticinal.com/media/catalog/product/p/o/powersante-nuhanciam-serum-anti-taches-puissance-4-30-ml.png?quality=80&fit=bounds&height=700&width=700&canvas=700:700&format=jpeg',
     },
     {
       title: 'Gel Nettoyant',

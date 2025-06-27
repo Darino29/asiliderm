@@ -18,12 +18,12 @@ const Skills = () => {
     { title: 'Bioderma', logo: biodermaLogo },
     { title: 'SVR', logo: 'https://fr.svr.com/cdn/shop/files/logo-SVR.png?crop=center&height=61&v=1613793556&width=120' },
     { title: 'Noreva', logo: noreva },
-   ];
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (scrollRef.current) {
-        const rowHeight = 200; // estimation d’une rangée (~4 cartes hauteur moyenne)
+        const rowHeight = 220;
         scrollRef.current.scrollBy({
           top: rowHeight,
           behavior: 'smooth',
@@ -34,14 +34,14 @@ const Skills = () => {
           scrollRef.current.scrollTo({ top: 0, behavior: 'smooth' });
         }
       }
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <Box p={20}>
-      <Heading as="h2" size="xl" mb={6} color="brand.500" textAlign="center">
+    <Box p={{ base: 6, md: 16 }}>
+      <Heading as="h2" size="xl" mb={10} color="brand.500" textAlign="center">
         Mes marques
       </Heading>
 
@@ -55,9 +55,28 @@ const Skills = () => {
           '&::-webkit-scrollbar': { display: 'none' },
         }}
       >
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing={4}>
+        <SimpleGrid
+          columns={{ base: 1, sm: 2, md: 3 }}
+          spacing={6}
+          justifyItems="center"
+        >
           {skills.map((skill, index) => (
-            <SkillCard key={index} {...skill} />
+            <Box
+              key={index}
+              bg="beige"
+              p={6}
+              borderRadius="2xl"
+              boxShadow="md"
+              transition="all 0.3s ease"
+              _hover={{ boxShadow: 'xl', transform: 'scale(1.03)' }}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              minH="120px"
+              w="100%"
+            >
+              <SkillCard {...skill} />
+            </Box>
           ))}
         </SimpleGrid>
       </Box>

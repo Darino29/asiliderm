@@ -14,7 +14,7 @@ const Footer = () => {
         </Link>
       </HStack>
       <Text textAlign="center" fontSize="sm">
-        © {new Date().getFullYear()} Asiliderm. Tous droits réservés.
+        © {new Date().getFullYear()} Asili dermparis. Tous droits réservés.
       </Text>
     </Box>
   );
