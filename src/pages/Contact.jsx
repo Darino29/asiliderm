@@ -1,12 +1,13 @@
-import { Box, Heading, Link, Stack, Flex, Image} from '@chakra-ui/react';
+import { Box, Heading, Link, Stack, Flex, Image, useColorModeValue } from '@chakra-ui/react';
 import { FaEnvelope, FaPhone, FaWhatsapp } from 'react-icons/fa';
 import {Link as ScrollLink} from 'react-scroll';
 
 import logo from '../assets/images/pdp.png';
 
 const Contact = () => {
+  const bg = useColorModeValue('brand.100', 'gray.800');
   return (
-    <Box p={20} bgColor="brand.100" color="white">
+    <Box p={20} bg={bg} color="white">
       <Flex 
         direction={{ base: 'column', md: 'row' }} 
         alignItems={{ base: 'center', md: 'flex-start' }}
