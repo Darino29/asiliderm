@@ -1,8 +1,12 @@
-import { Box, Flex, Heading, Text, Image } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, Image, useColorModeValue } from '@chakra-ui/react';
 import { useEffect, useRef } from 'react';
 
 const Projet = () => {
   const scrollRef = useRef(null);
+  const bg = useColorModeValue('brand.100', 'gray.800');
+  const cardBg = useColorModeValue('brand.50', 'gray.700');
+  const headingColor = useColorModeValue('brand.900', 'brand.100');
+  const textColor = useColorModeValue('brand.900', 'brand.50');
 
   const projets = [
     {
@@ -98,8 +102,8 @@ const Projet = () => {
   }, []);
 
   return (
-    <Box p={8} minH="100vh" bgColor="brand.100">
-      <Heading as="h1" size="xl" mb={6} textAlign="center" color="brand.900">
+    <Box p={8} minH="100vh" bg={bg}>
+      <Heading as="h1" size="xl" mb={6} textAlign="center" color={headingColor}>
         Nos Produits Cosmétiques
       </Heading>
 
@@ -118,7 +122,7 @@ const Projet = () => {
             key={index}
             minW="280px"
             maxW="300px"
-            bg="brand.50"
+            bg={cardBg}
             borderRadius="xl"
             overflow="hidden"
             boxShadow="md"
@@ -131,7 +135,7 @@ const Projet = () => {
               <Heading size="md" mb={2} color="brand.500">
                 {projet.title}
               </Heading>
-              <Text fontSize="sm" color="brand.900" mb={2}>
+              <Text fontSize="sm" color={textColor} mb={2}>
                 {projet.description}
               </Text>
               <Text as="a" href={projet.link} fontSize="sm" color="accent" fontWeight="bold">
