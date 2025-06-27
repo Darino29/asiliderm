@@ -98,8 +98,8 @@ const Projet = () => {
   }, []);
 
   return (
-    <Box p={8} minH="100vh" bgColor="#E7C7A4">
-      <Heading as="h1" size="xl" mb={6} textAlign="center" color="#5E412F">
+    <Box p={8} minH="100vh" bgColor="brand.100">
+      <Heading as="h1" size="xl" mb={6} textAlign="center" color="brand.900">
         Nos Produits Cosmétiques
       </Heading>
 
@@ -118,7 +118,7 @@ const Projet = () => {
             key={index}
             minW="280px"
             maxW="300px"
-            bg="#fffaf5"
+            bg="brand.50"
             borderRadius="xl"
             overflow="hidden"
             boxShadow="md"
@@ -128,13 +128,13 @@ const Projet = () => {
           >
             <Image src={projet.image} alt={projet.title} objectFit="cover" w="100%" h="200px" />
             <Box p={4}>
-              <Heading size="md" mb={2} color="#C89F72">
+              <Heading size="md" mb={2} color="brand.500">
                 {projet.title}
               </Heading>
-              <Text fontSize="sm" color="#5E412F" mb={2}>
+              <Text fontSize="sm" color="brand.900" mb={2}>
                 {projet.description}
               </Text>
-              <Text as="a" href={projet.link} fontSize="sm" color="#faaf40" fontWeight="bold">
+              <Text as="a" href={projet.link} fontSize="sm" color="accent" fontWeight="bold">
                 En savoir plus →
               </Text>
             </Box>

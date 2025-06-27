@@ -41,7 +41,7 @@ const Skills = () => {
 
   return (
     <Box p={20}>
-      <Heading as="h2" size="xl" mb={6} color="#C89F72" textAlign="center">
+      <Heading as="h2" size="xl" mb={6} color="brand.500" textAlign="center">
         Mes marques
       </Heading>
 

@@ -25,13 +25,13 @@ const Accueil = () => {
       >
         
         <VStack align={{ base: 'center', md: 'start' }} spacing={6} maxW={{ base: '100%', md: '50%' }} >
-          <Heading as="h1" size="2xl" color="#C89F72" textAlign={{ base: 'center', md: 'left' }} className='reveal'>
+          <Heading as="h1" size="2xl" color="brand.500" textAlign={{ base: 'center', md: 'left' }} className='reveal'>
           Suzelle THIMON
           </Heading>
-          <Text fontSize="lg" color="#C89F72" textAlign={{base: 'center',md:'left'}} className='bounce-in-left' >
+          <Text fontSize="lg" color="brand.500" textAlign={{base: 'center',md:'left'}} className='bounce-in-left' >
           COSMETIQUE ET DERMATOLOGIE
           </Text>
-          <Text fontSize="sm" color="#C89F72" textAlign={{ base: 'center', md: 'left' }} className='bounce-in-left' >
+          <Text fontSize="sm" color="brand.500" textAlign={{ base: 'center', md: 'left' }} className='bounce-in-left' >
 
           Je suis une professionnelle passionnée d&apos;esthétique, spécialisée dans l&apos;import/export de produits dermo-cosmétiques de qualité. Grâce à ma solide expertise et ma connaissance des besoins de la peau, je propose des conseils personnalisés pour sublimer la peau et répondre à des besoins spécifiques. Ma mission est de vous aider à maintenir une peau saine et éclatante, avec des produits de confiance adaptés à vos besoins.
           </Text>
@@ -40,7 +40,7 @@ const Accueil = () => {
               as="a"
               href={Catalogue}
               download
-              bg="#faaf40"
+              bg="accent"
               size="lg"
               variant="solid"
               className="bounce2"
@@ -52,7 +52,7 @@ const Accueil = () => {
             <Button
             as="a"
             href="mailto:contact@example.com?subject=Demande%20de%20renseignements&body=Bonjour%2C%20je%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20produits."
-            bg="#faaf40"
+            bg="accent"
             size="lg"
             variant="solid"
             className="bounce1"
