@@ -6,6 +6,7 @@ import {
   Image,
   useColorModeValue,
 } from "@chakra-ui/react";
+import Catalogue from "../assets/catalogue/catalogue.pdf";
 import { useEffect, useRef } from "react";
 
 const Projet = () => {
@@ -196,7 +197,8 @@ const Projet = () => {
               </Box>
               <Text
                 as="a"
-                href={projet.link}
+                href={Catalogue}
+                download
                 fontSize="sm"
                 color="accent"
                 fontWeight="bold"
