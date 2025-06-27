@@ -54,8 +54,7 @@ const Header = () => {
           <ScrollLink to="contact" smooth duration={500} offset={-70}>
             Contact
           </ScrollLink>
-        </HStack>
-        {/* Boutons droite */}
+          {/* Boutons droite */}
         <Flex align="center">
           <IconButton
             aria-label="Toggle Menu"
@@ -74,6 +73,8 @@ const Header = () => {
             color="white"
           />
         </Flex>
+        </HStack>
+        
       </Flex>
 
       {/* Menu Mobile */}
