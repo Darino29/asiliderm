@@ -7,6 +7,10 @@ const config = {
 
 const theme = extendTheme({
   config,
+  fonts: {
+    heading: "'Inter', sans-serif",
+    body: "'Inter', sans-serif",
+  },
   colors: {
     brand: {
       50: '#fffaf5',
