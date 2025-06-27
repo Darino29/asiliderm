@@ -1,5 +1,5 @@
-import { Box, HStack, IconButton, Flex, Image } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { Box, HStack, IconButton, Flex, Image, useColorMode } from '@chakra-ui/react';
+import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useDisclosure } from '@chakra-ui/react';
 import { Link as ScrollLink } from 'react-scroll'; 
 import '../../styles/animation.css';
@@ -7,6 +7,7 @@ import logo from '../../assets/images/logo-nb.png';
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode();
   
   return (
 
@@ -19,13 +20,22 @@ const Header = () => {
           </Box>
 
           
-          <IconButton
-            aria-label="Toggle Navigation"
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}
-            colorScheme="whiteAlpha"
-          />
+          <Flex align="center">
+            <IconButton
+              aria-label="Toggle Navigation"
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              display={{ md: 'none' }}
+              onClick={isOpen ? onClose : onOpen}
+              colorScheme="whiteAlpha"
+            />
+            <IconButton
+              aria-label="Toggle Theme"
+              icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+              onClick={toggleColorMode}
+              colorScheme="whiteAlpha"
+              ml={2}
+            />
+          </Flex>
 
           
           <HStack spacing={7} sx={{ marginRight: 100 }} display={{ base: 'none', md: 'flex' }}>
@@ -60,6 +70,12 @@ const Header = () => {
               <ScrollLink to="contact" smooth={true} duration={500} offset={-70} onClick={onClose}>
                 Contact
               </ScrollLink>
+              <IconButton
+                aria-label="Toggle Theme"
+                icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+                onClick={toggleColorMode}
+                colorScheme="whiteAlpha"
+              />
             </HStack>
           </Box>
         )}
